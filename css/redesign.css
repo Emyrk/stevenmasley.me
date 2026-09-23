@@ -1,0 +1,368 @@
+@keyframes breatheName {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .88; }
+}
+
+body.redesign {
+    margin: 0;
+    font-family: 'Manrope', system-ui, sans-serif;
+}
+
+.redesign a {
+    color: inherit;
+}
+
+.redesign ::selection {
+    background: oklch(0.75 0.15 55 / .35);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 560px;
+    overflow: hidden;
+    background: oklch(0.16 0.02 55);
+    color: oklch(0.96 0.006 60);
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 62% 40%;
+}
+
+.hero-scrim-side {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg, oklch(0.12 0.015 55 / .96) 0%, oklch(0.12 0.015 55 / .82) 30%, oklch(0.12 0.015 55 / .35) 56%, oklch(0.12 0.015 55 / .12) 78%, transparent 100%);
+}
+
+.hero-scrim-bottom {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, oklch(0.1 0.015 55 / .55) 0%, transparent 30%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 6vw;
+}
+
+.hero-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    max-width: 640px;
+}
+
+.location-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font: 600 12px/1 ui-monospace, 'SF Mono', Menlo, monospace;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: oklch(0.75 0.15 55);
+    text-decoration: none;
+    width: fit-content;
+}
+
+.location-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: oklch(0.75 0.15 55);
+    display: inline-block;
+}
+
+.hero-name {
+    margin: 0;
+    font: 800 clamp(40px, 7vw, 84px)/1 'Manrope', sans-serif;
+    letter-spacing: -.02em;
+    cursor: default;
+    animation: breatheName 6s ease-in-out infinite;
+    user-select: none;
+}
+
+.hero-title {
+    margin: 0;
+    font: 500 20px/1.4 'Manrope', sans-serif;
+    color: oklch(0.92 0.01 60);
+}
+
+.hero-title a {
+    text-decoration: underline;
+    text-decoration-color: oklch(0.75 0.15 55 / .5);
+    text-underline-offset: 3px;
+}
+
+.hero-blurb {
+    margin: -10px 0 0;
+    font: 400 15px/1.5 'Manrope', sans-serif;
+    color: oklch(0.68 0.015 60);
+}
+
+/* ---------- Project pills ---------- */
+
+.pills-label {
+    font: 600 11px/1 ui-monospace, 'SF Mono', Menlo, monospace;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: oklch(0.6 0.02 60);
+}
+
+.pills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.pill-wrap {
+    position: relative;
+}
+
+.pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 13px;
+    border-radius: 999px;
+    border: 1px solid oklch(0.5 0.02 60 / .5);
+    background: oklch(0.2 0.015 55 / .5);
+    backdrop-filter: blur(6px);
+    font: 600 12.5px/1 'Manrope', sans-serif;
+    color: oklch(0.94 0.006 60);
+    cursor: default;
+    transition: border-color .2s, background .2s;
+}
+
+.pill.logo-only {
+    padding: 4px 12px;
+}
+
+.pill.dim {
+    border-color: oklch(0.4 0.015 60 / .35);
+    background: oklch(0.18 0.012 55 / .3);
+    color: oklch(0.6 0.008 60);
+    opacity: .75;
+}
+
+.pill-wrap:hover .pill {
+    border-color: oklch(0.75 0.15 55 / .8);
+    background: oklch(0.24 0.02 55 / .7);
+}
+
+.pill-logo {
+    height: 26px;
+    width: auto;
+    max-width: 170px;
+    object-fit: contain;
+}
+
+.pill-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.pill-tooltip {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 0;
+    z-index: 5;
+    min-width: 200px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid oklch(0.5 0.02 60 / .4);
+    background: oklch(0.13 0.015 55 / .96);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 12px 30px oklch(0 0 0 / .4);
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .15s;
+}
+
+.pill-wrap:hover .pill-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.pill-tooltip-title {
+    font: 800 13px/1 'Manrope', sans-serif;
+    color: oklch(0.96 0.006 60);
+    margin-bottom: 8px;
+}
+
+.pill-tooltip-body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font: 500 12px/1.3 'Manrope', sans-serif;
+}
+
+.pill-tooltip-body .label {
+    color: oklch(0.75 0.15 55);
+    font-weight: 700;
+}
+
+.pill-tooltip-body .value {
+    color: oklch(0.85 0.008 60);
+}
+
+/* ---------- Social row ---------- */
+
+.social-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: .75;
+    transition: opacity .2s;
+    text-decoration: none;
+    font: 600 13px/1 'Manrope', sans-serif;
+    color: oklch(0.9 0.01 60);
+}
+
+.social-link:hover {
+    opacity: 1;
+}
+
+.social-link img {
+    width: 20px;
+    height: 20px;
+    opacity: .85;
+}
+
+.social-link.github img {
+    filter: invert(1) brightness(1.8);
+}
+
+/* ---------- Floating cycling button ---------- */
+
+.macy-fab[hidden] {
+    display: none;
+}
+
+.macy-fab {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 20;
+    width: 96px;
+    display: block;
+    filter: drop-shadow(0 8px 20px oklch(0 0 0 / .45));
+    transition: transform .2s ease-out;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.macy-fab:hover,
+.macy-fab:focus-visible {
+    transform: scale(1.08);
+}
+
+.macy-fab img {
+    width: 100%;
+    display: block;
+}
+
+@media (max-width: 480px) {
+    .macy-fab {
+        width: 72px;
+        right: 14px;
+        bottom: 14px;
+    }
+}
+
+/* ---------- Cycling page ---------- */
+
+.cycling-page {
+    min-height: 100vh;
+    color: oklch(0.96 0.006 60);
+    background: oklch(0.14 0.015 55);
+    padding: 6vw 6vw 8vw;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font: 600 13px/1 'Manrope', sans-serif;
+    color: oklch(0.7 0.01 60);
+    text-decoration: none;
+    margin-bottom: 40px;
+    transition: color .2s;
+}
+
+.back-link:hover {
+    color: oklch(0.9 0.006 60);
+}
+
+.cycling-intro {
+    max-width: 720px;
+    margin-bottom: 48px;
+}
+
+.cycling-eyebrow {
+    font: 600 11px/1 ui-monospace, 'SF Mono', Menlo, monospace;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: oklch(0.75 0.15 55);
+    margin-bottom: 16px;
+}
+
+.cycling-heading {
+    margin: 0 0 12px;
+    font: 800 clamp(32px, 5vw, 56px)/1.05 'Manrope', sans-serif;
+    letter-spacing: -.02em;
+}
+
+.cycling-sub {
+    margin: 0;
+    font: 400 16px/1.5 'Manrope', sans-serif;
+    color: oklch(0.68 0.015 60);
+}
+
+.cycling-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+}
+
+.cycling-grid figure {
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: oklch(0.2 0.015 55 / .4);
+}
+
+.cycling-grid img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.cycling-grid figcaption {
+    padding: 12px 14px;
+    font: 500 13px/1.4 'Manrope', sans-serif;
+    color: oklch(0.75 0.01 60);
+}

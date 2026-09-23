@@ -5,59 +5,120 @@
     <meta charset="utf-8">
     <meta name="description" content="Personal Site">
     <meta name="author" content="Steven Masley">
-    <link rel="icon" href="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#db5945">
     <title>Steven Masley</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="css/redesign.css" rel="stylesheet">
+
+    <link rel="icon" href="img/frame.ico">
 </head>
 
-<section id="hero">
-    <div class="container-fluid wrapper">
-        <div class="row">
-            <div id="hero-call">
-                <h1 class="tlt" data-in-effect="rollIn">Steven Masley</h1>
-                <div class="social-listing col-sm-12 col-lg-12">
-                    <!-- <a href="https://twitter.com/SJMasley"><img src="img/social/twitter.png"
-                            class="social-media-img" /></a> -->
-                    <a href="https://github.com/Emyrk"><img src="img/social/github.png" class="social-media-img" /></a>
-                    <a href="https://www.linkedin.com/in/steven-masley-593983120"><img src="img/social/linkedin.png"
-                            class="social-media-img" /></a>
+<body class="redesign">
+    <div class="hero">
+        <img class="hero-bg" src="img/bg-main_modern.jpg" alt="" />
+        <div class="hero-scrim-side"></div>
+        <div class="hero-scrim-bottom"></div>
+
+        <div class="hero-content">
+            <div class="hero-inner">
+                <a href="cycling.html" class="location-link">
+                    <span class="location-dot"></span>
+                    Austin, TX
+                </a>
+
+                <h1 class="hero-name">Steven Masley</h1>
+
+                <p class="hero-title">
+                    Staff Software Engineer at <a href="https://coder.com" target="_blank" rel="noopener">Coder</a>
+                </p>
+                <p class="hero-blurb">
+                    Previously, I learned why you don't build your own blockchain.
+                </p>
+
+                <div>
+                    <div class="pills-label">Ask me about</div>
+                    <div class="pills-row">
+
+                        <div class="pill-wrap">
+                            <div class="pill logo-only">
+                                <img class="pill-logo" src="img/ChronicleLogoCenter.webp" alt="Chronicle" />
+                            </div>
+                            <div class="pill-tooltip">
+                                <div class="pill-tooltip-title">Chronicle</div>
+                                <div class="pill-tooltip-body">
+                                    <div><span class="label">Why:</span> <span class="value">Fun</span></div>
+                                    <div><span class="label">Who:</span> <span class="value">WoW playerbase</span></div>
+                                    <div><span class="label">What:</span> <span class="value">Performance analytics platform</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pill-wrap">
+                            <div class="pill">
+                                <img class="pill-icon" src="img/dashugel.png" alt="" />
+                                Das Hugel
+                            </div>
+                            <div class="pill-tooltip">
+                                <div class="pill-tooltip-title">Das Hugel</div>
+                                <div class="pill-tooltip-body">
+                                    <div><span class="label">Why:</span> <span class="value">Fun</span></div>
+                                    <div><span class="label">Who:</span> <span class="value">Austin Cyclists</span></div>
+                                    <div><span class="label">What:</span> <span class="value">Annual cycling event results</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pill-wrap">
+                            <div class="pill dim">
+                                <img class="pill-icon" src="img/factom.png" alt="" />
+                                Crypto
+                            </div>
+                            <div class="pill-tooltip">
+                                <div class="pill-tooltip-title">Crypto</div>
+                                <div class="pill-tooltip-body">
+                                    <div><span class="label">Why:</span> <span class="value">Job</span></div>
+                                    <div><span class="label">What:</span> <span class="value">Immutable data</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pill-wrap">
+                            <div class="pill dim">
+                                <img class="pill-icon" src="img/hz.png" alt="" />
+                                hodl.zone
+                            </div>
+                            <div class="pill-tooltip">
+                                <div class="pill-tooltip-title">hodl.zone</div>
+                                <div class="pill-tooltip-body">
+                                    <div><span class="label">Why:</span> <span class="value">Interest on Crypto</span></div>
+                                    <div><span class="label">Who:</span> <span class="value">Crypto hodlers</span></div>
+                                    <div><span class="label">What:</span> <span class="value">Automatic lending</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="social-listing col-sm-12 col-md-12 col-lg-12">
-                    <h2>What I did</h2>
-                    <!-- <a href="https://factom.com"><img src="img/social/factom.jpg" class="social-media-img ben-image"
-                            style="border-radius:10px;" /></a> -->
-                    <!-- <a href="https://medium.com/@stevenmasley"><img src="img/social/medium.jpg" class="social-media-img ben-image" style="border-radius:10px;" /></a> -->
-                    <a href="https://hodl.zone/"><img src="img/social/hodl.png"
-                            class="social-media-img unsung-image" /></a>
-                    <a href="https://factoid.org/"><img src="img/tfa_shield_color.svg"
-                            class="social-media-img ben-image"
-                            style="border-radius:10px;background-color: white;padding: 5px;" /></a>
+
+                <div class="social-row">
+                    <a class="social-link github" href="https://github.com/Emyrk" target="_blank" rel="noopener">
+                        <img src="img/social/github.png" alt="" /> GitHub
+                    </a>
+                    <a class="social-link" href="https://www.linkedin.com/in/steven-masley-593983120" target="_blank" rel="noopener">
+                        <img src="img/social/linkedin.png" alt="" /> LinkedIn
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-</section>
 
-<div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.fittext.js"></script>
-    <script src="js/jquery.lettering.js"></script>
-    <script src="js/jquery.textillate.js"></script>
-    <script>
-        $(function () {
-            $('.tlt').textillate();
-        })
-    </script>
+    <a class="macy-fab" href="cycling.html" aria-label="Go to cycling page" hidden>
+        <img src="img/macy.webp" alt="Macy" />
+    </a>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109069700-1"></script>
     <script>
@@ -67,5 +128,6 @@
 
         gtag('config', 'UA-109069700-1');
     </script>
+</body>
 
-</div>
+</html>
