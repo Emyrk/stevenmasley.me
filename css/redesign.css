@@ -66,6 +66,13 @@ body.redesign {
     padding: 6vw;
 }
 
+@media (max-width: 640px) {
+    .hero-content {
+        align-items: flex-start;
+        padding-top: 14vw;
+    }
+}
+
 .hero-inner {
     display: flex;
     flex-direction: column;
