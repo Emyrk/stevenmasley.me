@@ -62,13 +62,13 @@ body.redesign {
     z-index: 2;
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding: 6vw;
+    padding-top: 10vw;
 }
 
 @media (max-width: 640px) {
     .hero-content {
-        align-items: flex-start;
         padding-top: 14vw;
     }
 }
